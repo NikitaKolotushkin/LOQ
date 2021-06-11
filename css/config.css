@@ -8,3 +8,7 @@
     width: 82.6%;
     margin: 0 auto;
 }
+
+.active {
+    height: 10vh;
+}
