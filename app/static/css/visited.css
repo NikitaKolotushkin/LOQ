@@ -1,0 +1,50 @@
+.main_content {
+    padding-top: 4.4%;
+}
+
+.main__title {
+    font-size: 7vw;
+    margin-bottom: 2vh;
+    margin-left: 1.4vh;
+}
+
+.meet__title {
+    font-size: 5vw;
+    margin-bottom: 1.5vh;
+}
+
+.meet__adress {
+    font-size: 3.5vw;
+    font-weight: 300;
+    margin-bottom: 1.5vh;
+}
+
+.meet__group {
+    font-size: 5vw;
+    margin-bottom: 1.2vh;
+}
+
+.meet__peoples {
+    height: 9vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.people {
+    width: 25%;
+    text-align: center;
+}
+
+.avatar {
+    width: 65%;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.name {
+    width: 75%;
+    margin: 0 auto;
+    font-size: 2.5vw;
+    font-weight: 600;
+    line-height: 1.3vh;
+}

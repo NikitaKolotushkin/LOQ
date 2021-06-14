@@ -9,8 +9,23 @@
     margin: 0 auto;
 }
 
-.active {
-    height: 10vh;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.content__block {
+    width: 100%;
+    padding: 1.5vh;
+    margin-bottom: 3vh;
+    background: rgba(253, 164, 50, 1);
+    background: linear-gradient(45deg, rgba(253, 164, 50, 1) 0%, rgba(213, 45, 139, 1) 100%);
+    border-radius: 30px;
+    color: #ffffff;
 }
 
 .main_content {
