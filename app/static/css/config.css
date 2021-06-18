@@ -30,10 +30,17 @@ p {
 
 .main_content {
     height: 100vh;
+    
+}
+
+.main__bg {
+    height: 100vh;
+    width: 100%;
     background: #ffffff url(../assets/img/main-screen_bg.png);
     background-position: center bottom;
     background-size: cover;
-    background-attachment: fixed;
+    position: fixed;
+    z-index: -999999;
 }
 
 nav {
