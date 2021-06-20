@@ -23,7 +23,7 @@ p {
     padding: 1.5vh;
     margin-bottom: 3vh;
     background: rgba(253, 164, 50, 1);
-    background: linear-gradient(60deg, rgba(253, 164, 50, 1) 0%, rgba(213, 45, 139, 1) 100%);
+    background: linear-gradient(60deg, #fda432 0%, #d52d8b 100%);
     border-radius: 30px;
     color: #ffffff;
 }
