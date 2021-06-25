@@ -16,7 +16,30 @@
 
     <section class="main_content">
         <div class="container">
-            
+            <h1 class="main__title">Подбор встречи</h1>
+            <div class="map"></div>
+        </div>
+        <div class="small_container">
+            <h2 class="range__title">Радиус поиска</h2>
+            <input type="range" name="" class="range__selector selector">
+            <hr>
+            <h2 class="novelty__title">Степень новизны</h2>
+            <input type="range" class="novelty__selector selector">
+            <p class="novelty__description">всегда должно быть что-то знакомое</p>
+            <h2 class="price__title">Цена</h2>
+            <input type="range" class="price__selector">
+            <hr>
+            <div class="lists-row">
+                <select name="payment" id="" >
+                    <option disabled selected value="0">Способ оплаты</option>
+                </select>
+                <select name="date" id="">
+                    <option disabled selected value="0">Время и дата</option>
+                    <option value="123">Hehehe</option>
+                </select>
+            </div>
+            <hr>
+            <input type="submit" value="Подобрать встречу" class="meet__button">
         </div>
     </section>
 
