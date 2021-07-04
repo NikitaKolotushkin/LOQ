@@ -23,11 +23,9 @@ def register_blueprints(app: Flask):
     """
     Register all application blueprints
     """
-    from app.blueprints.main_page import main_page_bp
-    from app.blueprints.auth import auth_bp
+    from app.blueprints.meets import meets_bp
 
-    app.register_blueprint(main_page_bp)
-    app.register_blueprint(auth_bp)
+    app.register_blueprint(meets_bp)
 
 
 def init_extensions(app: Flask):
@@ -40,6 +38,9 @@ def init_extensions(app: Flask):
     # https://stackoverflow.com/questions/22929839/circular-import-of-db-reference-using-flask-sqlalchemy-and-blueprints
     from .extensions import db
     from .models import User, Role
+    from flask_cors import CORS
+
+    CORS(app)
 
     db.init_app(app)
     migrate.init_app(app, db)

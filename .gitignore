@@ -2,3 +2,5 @@ __pycache__/
 *.sw*
 .vscode/
 .idea/
+/frontend-app/node_modules/
+/frontend-app/static/js/

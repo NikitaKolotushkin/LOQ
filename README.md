@@ -4,6 +4,14 @@ Social network for travelers
 Установка и настройка проекта
 ---------------------
 
+### NodeJS
+```bash
+cd frontend-app
+npm install
+npm run build
+node nodeapp/app.js
+```
+
 ### Зависимости и venv
 
 Управление зависимостями реализовано с помощью [Poetry](https://python-poetry.org/). Установка Poetry описана в [документации](https://python-poetry.org/docs/#installation). Зависимости указаны в файле [`pyproject.toml`](pyproject.toml). При обновлении зависимостей изменяется файл [`poetry.lock`](poetry.lock) – он так же должен жить в гите.
