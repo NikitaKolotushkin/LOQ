@@ -3,7 +3,10 @@ import requests, json, tkinter
 
 def geocode(address):
     params = {
-        'access_token': "pk.eyJ1IjoidGVjaGVyZXRpYyIsImEiOiJja3FlNGVuYjcwNWdrMnBwZXY1ZG9obHN3In0.OmN8b-Ys8zo6TXYnZ1tclg"
+        'access_token': "pk.eyJ1IjoidGVjaGVyZXRpYyIsImEiOiJja3FlNGVuYjcwNWdrMnBwZXY1ZG9obHN3In0.OmN8b-Ys8zo6TXYnZ1tclg",
+        'limit': int(input('Введите количество ответов, которые вы хотите получить(максимум 10): ')),
+        'types': 'address,poi'
+        #'bbox': [57., 58., 59., 59.]
     }
 
     def code_to_URL(string):
@@ -12,7 +15,6 @@ def geocode(address):
         for i in '.,':
             string = string.replace(i, '')
         '''
-        print(string.encode())
         for el in string:
 
             if not el:
@@ -21,7 +23,6 @@ def geocode(address):
                 n = "%".join([i.upper() for i in str(el.encode())[2:-1].split(r'\x')])
             else:
                 n = el
-            print(el, n)
             res += n
         return '%20'.join(res.split())
 
@@ -31,8 +32,18 @@ def geocode(address):
     geo = requests.get(f"http://api.mapbox.com/geocoding/v5/mapbox.places/{encoded_address}.json", params=params)
     # print(*geo.text.split(','), sep='\n')
     di = dict(json.loads(geo.text))
-    return f"Координаты {address}: {di['features'][0]['geometry']['coordinates'][::-1]}"
 
+    if di:
+        for feature in di['features']:
+        #print(feature)
+            print(f"{'Место развлечения - ' if 'poi' in feature['place_type'] else 'Адрес - '}"
+                  f"{feature['place_name']}, {feature['geometry']['coordinates'][::-1]}")
+        return f"Координаты {address}: {di['features'][0]['geometry']['coordinates'][::-1]}"
+    return 'Not found'
+
+while True:
+    print(geocode(input()))
+'''
 def show_coords():
     res = geocode(input_form.get())
     output.configure(text=f'Результат: {res}')
@@ -55,3 +66,4 @@ inst.place(x=25, y=170)
 output.place(x=300, y=150)
 conv.place(x=150, y=150)
 display.mainloop()
+'''
